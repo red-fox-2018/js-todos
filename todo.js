@@ -13,7 +13,7 @@ switch(command[0]) {
     break;
   }
   case 'list': {
-    console.log('command list');
+    Controller.listController();
     break;
   }
   case 'add': {

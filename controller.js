@@ -11,6 +11,16 @@ class TodoController {
     TodoView.findAllDisplay(findAllTodos)
   }
 
+  static sortList(sortBy){
+    let sortTodo = TodoModel.sortList(sortBy)
+    TodoView.findAllDisplay(sortTodo)
+  }
+
+  static completedList(sortBy){
+    let sortTodo = TodoModel.completedList(sortBy)
+    TodoView.findAllDisplay(sortTodo)
+  }
+
   static create(task_content){
     let createTodo = TodoModel.create(task_content)
     TodoView.createMessage(createTodo)
@@ -30,6 +40,12 @@ class TodoController {
     let statusTask = TodoModel.updateStatus(idTask, newStatus)
     TodoView.findAllDisplay(statusTask)
   }
+
+  static addTags(idTask, tags){
+    let tagsTask = TodoModel.addTags(idTask, tags)
+    TodoView.addTagMessage(tagsTask)
+  }
+
 }
 
 module.exports = TodoController;

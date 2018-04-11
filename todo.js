@@ -11,6 +11,14 @@ switch (command[0]) {
     TodoController.index()
     break;
 
+  case "list:created":
+    TodoController.sortList(command[1])
+    break;
+
+  case "list:completed":
+    TodoController.completedList(command[1])
+    break;
+
   case "add":
     let task_content = command[1]
     TodoController.create(task_content)
@@ -32,6 +40,13 @@ switch (command[0]) {
   case "uncomplete":
     TodoController.updateStatus(command[1], false)
     break;
+
+  case "tag":
+    let idTask = command[1]
+    let tags = command.slice(2)
+    TodoController.addTags(idTask, tags)
+    break;
+
   default: TodoController.help()
 
 }

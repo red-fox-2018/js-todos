@@ -32,6 +32,7 @@ class TodoModel {
       task: task_content,
       status: false,
       tag: [],
+      update: new Date(),
       date: new Date()
     }
 
@@ -60,11 +61,67 @@ class TodoModel {
     todos.forEach(function(todo, idx){
       if(todo.id == idTask){
         todo.status = newStatus
+        todo.update = new Date()
       }
     })
     fs.writeFileSync('./data.json', JSON.stringify(todos, null, 2))
     return todos
   }
+
+  static sortList(sortBy){
+    let todos = this.findAll()
+    if(sortBy === undefined){
+      return todos
+    }else if(sortBy.toLowerCase() === 'desc'){
+      todos.sort(function(a,b){
+        return new Date(b.date) - new Date(a.date)
+      })
+    }
+
+    return todos
+  }
+
+  static completedList(sortBy){
+    let todos = this.findAll()
+    let completedTodos = []
+    todos.forEach((todo) =>{
+      if(todo.status){
+        completedTodos.push(todo)
+      }
+    })
+
+    if(sortBy === undefined){
+      return completedTodos
+    }else if(sortBy.toLowerCase() === 'desc'){
+      completedTodos.sort(function(a,b){
+        return new Date(b.update) - new Date(a.update)
+      })
+    }
+
+    return completedTodos
+  }
+
+  static addTags(idTask, tags){
+    let todos= this.findAll()
+    todos.forEach(function(todo, idx){
+      if(todo.id == idTask){
+        tags.forEach((data) => {
+          let tagFind = todo.tag.includes(data)
+          if(!tagFind){
+            todo.tag.push(data)
+          }
+        })
+        todo.update = new Date()
+      }
+    })
+    fs.writeFileSync('./data.json', JSON.stringify(todos, null, 2))
+
+    let findTodo = todos.filter(function(todo) {
+                    return todo.id == idTask;
+                  });
+    return findTodo[0]
+  }
+
 }
 
 module.exports = TodoModel;

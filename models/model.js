@@ -1,5 +1,5 @@
 const Lib = require('../lib/library.js')
-const Todo = require('./todo.js')
+const Todo = require('./todo_obj.js')
 
 class Model{
   constructor(){

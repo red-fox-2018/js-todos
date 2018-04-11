@@ -12,7 +12,7 @@ class View {
     console.log(`$ node todo.js list:created asc|desc`);
     console.log(`$ node todo.js list:completed asc|desc`);
     console.log(`$ node todo.js list:tag <task_id> <tag_name_1> <tag_name_n>`);
-    console.log(`$ node todo.js filter:<tar_name>`);
+    console.log(`$ node todo.js filter: <tar_name>`);
   }
   /**
    * 

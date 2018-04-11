@@ -45,11 +45,11 @@ switch(command[0]) {
     Controller.listCompletedSortByCreatedController(command[1]);
     break;
   }
-  case 'tag': {
+  case 'list:tag': {
     Controller.addTagController(command.slice(1));
     break;
   }
-  case 'filter': {
+  case 'filter:': {
     Controller.getDataFilterByController(command[1]);
     break;
   }

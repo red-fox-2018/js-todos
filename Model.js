@@ -21,6 +21,7 @@ class Model {
     let newList = {
       id: allList.length + 1,
       task: textList,
+      tags: [],
       created_data: new Date().toISOString(),
       completed_data: null,
     }

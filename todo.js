@@ -26,7 +26,8 @@ switch(command[0]) {
     break;
   }
   case 'delete': {
-    console.log('command delete');
+    // console.log('command delete');
+    Controller.deleteByIdController(command[1]);
     break;
   }
   case 'complete': {

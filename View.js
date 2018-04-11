@@ -17,15 +17,18 @@ class View {
    * @param {Arrar} list - Array of object list
    */
   static listView(list) {
-    // console.log(`#################### LIST VIEW ####################`);
-    // let number = 1;
     for (let l of list) {
-      console.log(`${l.id}. ${l.task}`);
+      if (l != null && l != undefined) {
+        console.log(`${l.id}. ${l.task}`); 
+      }
       // number++;
     }
   }
   static successAddListView(textList) {
     console.log(`Added '${textList}' to your TODO list ....`);
+  }
+  static successDeletedListView(textList) {
+    console.log(`Deleted '${textList}' from yout TODO list ...`);
   }
 }
 

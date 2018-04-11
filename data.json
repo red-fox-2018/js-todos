@@ -1,1 +1,1 @@
-[{"id":1,"task":"to do list 1"},{"id":2,"task":"to do list 2"},{"id":3,"task":"to do list 3"},{"id":4,"task":"to do list 4"},null]
+[{"id":1,"task":"to do list 1","complete":false},{"id":2,"task":"to do list 2","complete":false},{"id":3,"task":"to do list 3","complete":false},{"id":4,"task":"to do list 4","complete":false}]

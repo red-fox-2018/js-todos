@@ -26,16 +26,15 @@ switch(command[0]) {
     break;
   }
   case 'delete': {
-    // console.log('command delete');
     Controller.deleteByIdController(command[1]);
     break;
   }
   case 'complete': {
-    console.log('command complete');
+    Controller.completeController(command[1]);
     break;
   }
   case 'uncomplete': {
-    console.log('command uncomplete');
+    Controller.uncompleteController(command[1]);
     break;
   }
   default: {

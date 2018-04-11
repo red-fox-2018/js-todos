@@ -19,7 +19,7 @@ class View {
   static listView(list) {
     for (let l of list) {
       if (l != null && l != undefined) {
-        console.log(`${l.id}. ${l.task}`); 
+        console.log(`${l.id}. [${l.complete ? 'x': ' '}] ${l.task}`); 
       }
       // number++;
     }

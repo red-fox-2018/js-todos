@@ -42,6 +42,16 @@ class Controller {
       View.successDeletedListView(resultDeleted.task);
     }
   }
+  static completeController(id) {
+    id = Number(id.toString());
+    let listResult = Model.updateCompleteById(id, true);
+    View.listView(listResult);
+  }
+  static uncompleteController(id) {
+    id = Number(id.toString());
+    let listResult = Model.updateCompleteById(id, false);
+    View.listView(listResult);
+  }
 }
 
 module.exports = Controller;

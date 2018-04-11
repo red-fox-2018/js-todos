@@ -2,29 +2,32 @@
 const fs = require('fs');
 
 class Model {
+  /**
+   * getListMode().
+   * get all data from json file
+   */
   static getListModel() {
     return JSON.parse(fs.readFileSync('data.json', 'utf8'));
   }
+  static writeListModel(allList) {
+    fs.writeFileSync('data.json', JSON.stringify(allList), 'utf8');
+  }
   /**
-   * 
-   * @param {String} textList 
+   * @param {String} textList
+   * add new list to json file
    */
   static addListModel(textList) {
-    // get all list
-    let allList = JSON.parse(fs.readFileSync('data.json', 'utf8'));
-
+    let allList = Model.getListModel();
     let newList = {
       id: allList.length + 1,
       task: textList,
     }
-
     allList.push(newList);
-    
-    fs.writeFileSync('data.json', JSON.stringify(allList), 'utf8');
+    Model.writeListModel(allList);
     return true;
   }
   static findByIdModel(id) {
-    let allList = JSON.parse(fs.readFileSync('data.json', 'utf8'));
+    let allList = Model.getListModel();
     for (let al of allList) {
       if (al.id == id) {
         return [al];
@@ -33,7 +36,7 @@ class Model {
     return [{ id: null, task: null}];
   }
   static deleteByIdModel(id) {
-    let allList = JSON.parse(fs.readFileSync('data.json', 'utf8'));
+    let allList = Model.getListModel();
     let deletedList = {};
     for (let i = 0; i < allList.length; i++) {
       if (allList[i] != undefined && allList[i] != null) {
@@ -43,8 +46,21 @@ class Model {
         }
       }
     }
-    fs.writeFileSync('data.json', JSON.stringify(allList), 'utf8');
+    Model.writeListModel(allList);
     return deletedList;
+  }
+  static updateCompleteById(id, newStatus) {
+    let allList = Model.getListModel();
+    let deletedList = {};
+    for (let i = 0; i < allList.length; i++) {
+      if (allList[i] != undefined && allList[i] != null) {
+        if (allList[i].id == id) {
+          allList[i].complete = newStatus;
+        }
+      }
+    }
+    Model.writeListModel(allList);
+    return allList;
   }
 }
 

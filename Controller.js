@@ -88,6 +88,14 @@ class Controller {
     View.listView(resultAddTag)
     // console.log(tags);
   }
+  /**
+   * 
+   * @param {String} value string tags
+   */
+  static getDataFilterByController(tag) {
+    let filteredTaskBy = Model.getListFilterByTag(tag);
+    View.listView(filteredTaskBy)
+  }
 }
 
 module.exports = Controller;

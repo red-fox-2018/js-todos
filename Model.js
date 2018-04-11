@@ -93,6 +93,27 @@ class Model {
     let allListCompleted = allList.filter((value) => value.complete);
     return Model._sortByDateDesc(allListCompleted);
   }
+  // @ to do get with filter
+  static getListFilterByTag(checkTag) {
+    let allList = Model.getListModel();
+    let listFiltered = [];
+
+    for (let al of allList) {
+      let isTagExist = false;
+
+      for (let tag of al.tags) {
+        if (tag == checkTag) {
+          isTagExist = true;
+        }
+      }
+
+      if (isTagExist) {
+        listFiltered.push(al);
+      }
+    }
+    return listFiltered;
+  }
+
   static _sortByDateAsc(value) {
     return value.sort(function(b, a) {
       return new Date(b.completed_data) - new Date(a.completed_data);

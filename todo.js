@@ -49,9 +49,10 @@ switch(command[0]) {
     Controller.addTagController(command.slice(1));
     break;
   }
-  // case 'filter': {
-
-  // }
+  case 'filter': {
+    Controller.getDataFilterByController(command[1]);
+    break;
+  }
   default: {
     Controller.helpController();
     break;

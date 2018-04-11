@@ -9,6 +9,11 @@ class TodoView {
     console.log('$node todo.js complete                    # menandai status TODO selesai');
     console.log('$node todo.js uncomplete                  # menandai status TODO belum selesai');
   }
+
+  static findAllDisplay(todos)
+  todos.forEach(function(todo){
+    
+  })
 }
 
 module.exports = TodoView;

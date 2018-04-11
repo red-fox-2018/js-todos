@@ -7,7 +7,8 @@ class TodoController {
   }
 
   static index(){
-    
+    let findAllTodos = TodoModel.findAll()
+    TodoView.findAllDisplay(findAllTodos)
   }
 }
 

@@ -57,4 +57,6 @@ switch(command[0]) {
     Controller.helpController();
     break;
   }
-} 
+}
+
+// @ todo: filter null value after deleted

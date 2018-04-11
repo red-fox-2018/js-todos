@@ -18,11 +18,14 @@ class View {
    */
   static listView(list) {
     console.log(`#################### LIST VIEW ####################`);
-    let number = 1;
+    // let number = 1;
     for (let l of list) {
-      console.log(`${number}. ${l.task}`);
-      number++;
+      console.log(`${l.id}. ${l.task}`);
+      // number++;
     }
+  }
+  static successAddListView(textList) {
+    console.log(`Added '${textList}' to your TODO list ....`);
   }
 }
 

@@ -17,7 +17,9 @@ switch(command[0]) {
     break;
   }
   case 'add': {
-    console.log('command add');
+    // console.log(command.join(' '));
+    let newList = command.join(' ');
+    Controller.addListController(newList);
     break;
   }
   case 'findById': {

@@ -1,4 +1,4 @@
-const fs = require('fs')
+const Library = require('./library')
 
 class Model {
     constructor(id, taskName, statusComplate){
@@ -10,15 +10,13 @@ class Model {
     }
 
     static getTodos() {
-        var todoFile = fs.readFileSync('./data.json','utf8')
-        var todos = JSON.parse(todoFile)
+        var todos = Library.readFileJSON()
         return todos
     }
 
     static writeList(taskName) {
-        var todoFile = fs.readFileSync('./data.json','utf8')
-        var todos = JSON.parse(todoFile)
-    
+        var todos = Library.readFileJSON()
+
         let id = 0
         if(todos.length > 0){
             id = todos[todos.length-1].id + 1
@@ -31,14 +29,15 @@ class Model {
     
         todos.push(task)
     
-        fs.writeFileSync('./data.json',JSON.stringify(todos, null, 2),'utf8')
+        Library.writeFileJSON(todos)
         
         return taskName
     }
 
     static findById(id) {
-        var todoFile = fs.readFileSync('./data.json','utf8')
-        var todos = JSON.parse(todoFile)
+        // var todoFile = fs.readFileSync('./data.json','utf8')
+        // var todos = JSON.parse(todoFile)
+        var todos = Library.readFileJSON()
     
         let task = []
         for(let i=0; i<todos.length; i++) {
@@ -51,8 +50,7 @@ class Model {
     }
 
     static deleteTodo(taskId) {
-        var todoFile = fs.readFileSync('./data.json','utf8')
-        var todos = JSON.parse(todoFile)
+        var todos = Library.readFileJSON()
     
         var index = 0
         var flag = false
@@ -71,15 +69,14 @@ class Model {
             let taskName = todos[index].taskName
             todos.splice(index,index+1)
             
-            fs.writeFileSync('./data.json',JSON.stringify(todos, null, 2),'utf8')
+            Library.writeFileJSON(todos)
         
             return taskName
         }
     }
 
     static checkStatusTask(taskIdComplate) {
-        var todoFile = fs.readFileSync('./data.json','utf8')
-        var todos = JSON.parse(todoFile)
+        var todos = Library.readFileJSON()
     
         let index = 0
         for(let i=0; i<todos.length; i++) {
@@ -90,14 +87,14 @@ class Model {
 
         todos[index].statusComplate = true
     
-        fs.writeFileSync('./data.json',JSON.stringify(todos, null, 2),'utf8')
+        Library.writeFileJSON(todos)
 
         return todos
     }
 
     static unCheckStatusTask(taskIdUncomplate) {
-        var todoFile = fs.readFileSync('./data.json','utf8')
-        var todos = JSON.parse(todoFile)
+        var todos = Library.readFileJSON()
+
         let index = 0
         for(let i=0; i<todos.length; i++) {
             if(todos[i].id == taskIdUncomplate) {
@@ -107,7 +104,7 @@ class Model {
 
         todos[index].statusComplate = false
     
-        fs.writeFileSync('./data.json',JSON.stringify(todos, null, 2),'utf8')
+        Library.writeFileJSON(todos)
 
         return todos
     }

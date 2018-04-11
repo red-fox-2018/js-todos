@@ -3,27 +3,13 @@
  *
  */
 
-/*
-
-available command:
-$ node todo.js
-$ node todo.js help
-$ node todo.js list
-$ node todo.js add <task_content>
-$ node todo.js findById <id>
-$ node todo.js delete <id>
-$ node todo.js complete <id>
-$ node tood.js uncomplete <id>
-
-*/
-
-console.log(`#################### TODO LIST ####################`);
+const Controller = require('./Controller');
 
 let command = process.argv.slice(2);
 
 switch(command[0]) {
   case 'help' : {
-    console.log('command help');
+    Controller.helpController();
     break;
   }
   case 'list': {
@@ -40,12 +26,10 @@ switch(command[0]) {
   }
   case 'delete': {
     console.log('command delete');
-
     break;
   }
   case 'complete': {
     console.log('command complete');
-
     break;
   }
   case 'uncomplete': {
@@ -54,7 +38,7 @@ switch(command[0]) {
     break;
   }
   default: {
-    console.log('command help');
+    Controller.helpController();
     break;
   }
 } 

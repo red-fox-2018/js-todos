@@ -1,1 +1,68 @@
-[]
+[
+  {
+    "id": 1,
+    "status": "[ ]",
+    "task": "makan bakso",
+    "created_at": "Wed Apr 11 2018 17:30:43 GMT+0700 (WIB)",
+    "completed_at": "uncomplete",
+    "tag": []
+  },
+  {
+    "id": 2,
+    "status": "[x]",
+    "task": "maen GTA",
+    "created_at": "Wed Apr 11 2018 17:31:19 GMT+0700 (WIB)",
+    "completed_at": "Wed Apr 11 2018 18:57:39 GMT+0700 (WIB)",
+    "tag": [
+      "hobi",
+      "hiburan",
+      "game"
+    ]
+  },
+  {
+    "id": 3,
+    "status": "[ ]",
+    "task": "maen DoTA",
+    "created_at": "Wed Apr 11 2018 17:31:49 GMT+0700 (WIB)",
+    "completed_at": "uncomplete",
+    "tag": [
+      "hiburan",
+      "game",
+      "hobi"
+    ]
+  },
+  {
+    "id": 4,
+    "status": "[x]",
+    "task": "mandiin buaya",
+    "created_at": "Wed Apr 11 2018 17:39:12 GMT+0700 (WIB)",
+    "completed_at": "Wed Apr 11 2018 18:57:59 GMT+0700 (WIB)",
+    "tag": [
+      "hobi",
+      "pet"
+    ]
+  },
+  {
+    "id": 5,
+    "status": "[ ]",
+    "task": "belajar OOP",
+    "created_at": "Wed Apr 11 2018 17:41:22 GMT+0700 (WIB)",
+    "completed_at": "uncomplete",
+    "tag": [
+      "hobi",
+      "serius",
+      "belajar"
+    ]
+  },
+  {
+    "id": 6,
+    "status": "[x]",
+    "task": "naek gunung",
+    "created_at": "Wed Apr 11 2018 17:42:32 GMT+0700 (WIB)",
+    "completed_at": "Wed Apr 11 2018 18:58:02 GMT+0700 (WIB)",
+    "tag": [
+      "hobi",
+      "outdoor"
+    ]
+  }
+]

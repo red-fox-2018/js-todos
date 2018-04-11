@@ -1,1 +1,23 @@
-[]
+[
+  {
+    "task": "Bikin Aplikasi",
+    "id": 1,
+    "status": "uncomplete",
+    "createdAt": "2018-04-11T06:47:02.676Z",
+    "updatedAt": "2018-04-11T06:47:02.676Z"
+  },
+  {
+    "task": "Shut down my computer",
+    "id": 3,
+    "status": "uncomplete",
+    "createdAt": "2018-04-11T06:49:19.073Z",
+    "updatedAt": "2018-04-11T06:49:19.073Z"
+  },
+  {
+    "task": "Makan Sate Taichan",
+    "id": 4,
+    "status": "uncomplete",
+    "createdAt": "2018-04-11T07:15:33.813Z",
+    "updatedAt": "2018-04-11T07:15:33.813Z"
+  }
+]

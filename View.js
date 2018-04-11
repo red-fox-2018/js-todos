@@ -17,7 +17,7 @@ class View {
    * @param {Arrar} list - Array of object list
    */
   static listView(list) {
-    console.log(`#################### LIST VIEW ####################`);
+    // console.log(`#################### LIST VIEW ####################`);
     // let number = 1;
     for (let l of list) {
       console.log(`${l.id}. ${l.task}`);

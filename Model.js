@@ -24,7 +24,13 @@ class Model {
     return true;
   }
   static findByIdModel(id) {
-
+    let allList = JSON.parse(fs.readFileSync('data.json', 'utf8'));
+    for (let al of allList) {
+      if (al.id == id) {
+        return [al];
+      }
+    } 
+    return [{ id: null, task: null}];
   }
 }
 

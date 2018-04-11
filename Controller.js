@@ -32,6 +32,13 @@ class Controller {
       View.successAddListView(textList);
     }
   }
+
+  static findByIdController(id) {
+    id = Number(id.toString())
+    let listResult = Model.findByIdModel(id);
+    // console.log(listResult);
+    View.listView(listResult);
+  }
 }
 
 module.exports = Controller;

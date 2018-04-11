@@ -22,7 +22,7 @@ switch(command[0]) {
     break;
   }
   case 'findById': {
-    console.log('command find by id');
+    Controller.findByIdController(command[1]);
     break;
   }
   case 'delete': {

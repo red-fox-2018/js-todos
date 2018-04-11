@@ -97,6 +97,22 @@ class Model {
     return uncomplId;
   }
 
+  static sortingList(sortType) {
+    let listObj = this.readJsonFile()
+    if (sortType === undefined || sortType === 'asc') {
+      listObj.sort(function (a, b) {
+        return new Date(a.created_at) - new Date(b.created_at);
+      })
+      return listObj;
+    } else {
+      listObj.sort(function (a, b) {
+        return new Date(b.created_at) - new Date(a.created_at);
+      })
+      // console.log(listObj);
+      return listObj;
+    }
+  }
+
 }
 
 module.exports = Model

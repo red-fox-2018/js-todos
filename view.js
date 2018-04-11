@@ -44,6 +44,7 @@ class View {
   static showUncompleteByID(id) {
     console.log(`"${id.task}" is not completed`);
   }
+
 }
 
 

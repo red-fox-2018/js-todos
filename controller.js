@@ -39,6 +39,11 @@ class Controller {
     let uncomplId = Model.uncompleteByID(id);
     View.showUncompleteByID(uncomplId);
   }
+
+  static sortingList(sortType) {
+    let sorted = Model.sortingList(sortType);
+    View.showListFromJson(sorted)
+  }
 }
 
 

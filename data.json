@@ -1,1 +1,1 @@
-[]
+[{"id":1,"to_do":"bikin aplikasi","status":true,"created_date":"2018-04-11T08:33:01.179Z","completed_date":"2018-04-11T09:26:51.433Z","tags":["hobby","android"]},{"id":2,"to_do":"makan","status":true,"created_date":"2018-04-11T08:33:18.220Z","completed_date":"2018-04-11T09:06:35.918Z","tags":[]},{"id":3,"to_do":"olahraga","status":true,"created_date":"2018-04-11T08:33:21.500Z","completed_date":"2018-04-11T09:06:16.023Z","tags":["hobby","lari"]},{"id":4,"to_do":"tidur","status":false,"created_date":"2018-04-11T09:31:23.461Z","completed_date":"0","tags":[]}]

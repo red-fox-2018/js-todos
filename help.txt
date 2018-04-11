@@ -1,0 +1,8 @@
+$ node todo.js # will call help
+$ node todo.js help # menampilkan command apa saja yang tersedia
+$ node todo.js list # melihat daftar TODO
+$ node todo.js add <task_content> # menambahkan TODO ke dala list 
+$ node todo.js findById <task_id> # melihat detail TODO sesuai `task_id` nya
+$ node todo.js delete <task_id> # menghapus TODO sesuai `task_id` nya
+$ node todo.js complete <task_id> # menandai status TODO selesai 
+$ node todo.js uncomplete <task_id> # menandai status TODO belum selesai

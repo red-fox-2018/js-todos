@@ -9,8 +9,8 @@ class View {
     console.log(`$ node todo.js delete <id>`);
     console.log(`$ node todo.js complete <id>`);
     console.log(`$ node todo.js uncomplete <id>`);
-    console.log(`$ node todo.js list:created adc|dec`);
-    console.log(`$ node todo.js list:completed adc|dec`);
+    console.log(`$ node todo.js list:created asc|desc`);
+    console.log(`$ node todo.js list:completed asc|desc`);
     console.log(`$ node todo.js list:tag <task_id> <tag_name_1> <tag_name_n>`);
     console.log(`$ node todo.js filter:<tar_name>`);
   }

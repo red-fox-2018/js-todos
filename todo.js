@@ -37,6 +37,14 @@ switch(command[0]) {
     Controller.uncompleteController(command[1]);
     break;
   }
+  case 'list:created': {
+    Controller.listSortByCreatedController(command[1]);
+    break;
+  }
+  case 'list:completed': {
+    Controller.listCompletedSortByCreatedController(command[1]);
+    break;
+  }
   default: {
     Controller.helpController();
     break;

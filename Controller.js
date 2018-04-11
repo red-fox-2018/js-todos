@@ -66,6 +66,22 @@ class Controller {
     let listResult = Model.updateCompleteById(id, false);
     View.listView(listResult);
   }
+  static listSortByCreatedController(value = 'asc') {
+    let listResult = Model.getListModel();
+    if (value == 'desc') {
+      listResult.reverse();
+    }
+    View.listView(listResult)
+  }
+  static listCompletedSortByCreatedController(value = 'asc') {
+    let listResultCompleted;
+    if (value == 'asc') {
+      listResultCompleted = Model.getListCompletedAscModel();
+    } else if (value == 'desc') {
+      listResultCompleted = Model.getListCompletedDescModel();
+    }
+    View.listView(listResultCompleted);
+  }
 }
 
 module.exports = Controller;

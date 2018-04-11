@@ -15,7 +15,9 @@ class Controller {
    * get data from getListModel and show data to listView()
    */
   static listController() {
+    
     let listResult = Model.getListModel();
+
     View.listView(listResult);
   }
   /**
@@ -23,16 +25,9 @@ class Controller {
    * @param {String} newList - new list will add to List
    */
   static addListController(textList) {
-    let listResult = Model.getListModel();
-
-    let newList = {
-      id: listResult.length + 1,
-      task: textList,
-    }
-
-    listResult.push(newList);
     
-    let addList = Model.addListModel(listResult);
+    let addList = Model.addListModel(textList);
+
     if (addList) {
       View.successAddListView(textList);
     }

@@ -16,12 +16,18 @@ class Controller {
   }
 
   static addListToJson(newList) {
-    Model.addListToJson(newList)
+    let addedList = Model.addListToJson(newList)
+    View.showAddedList(addedList);
   }
 
   static findByID(id) {
     let taskId = Model.findByID(id);
     View.showByID(taskId);
+  }
+
+  static deleteByID(id) {
+    let delId = Model.deleteByID(id);
+    View.showDeletedID(delId);
   }
 }
 

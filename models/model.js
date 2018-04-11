@@ -15,8 +15,8 @@ class Model {
         }
 
         objTodo.status = 'uncomplete';
-        objTodo.createdAt = new Date();
-        objTodo.updatedAt = new Date();
+        objTodo.createdAt = new Date().toString();
+        objTodo.updatedAt = new Date().toString();
 
         this.todos.push(objTodo);
         write(this.todos);
@@ -58,6 +58,7 @@ class Model {
             if (todoId === task.id) {
                 index = i;
                 task.status = 'complete';
+                task.updatedAt = new Date().toString();
             }
         });
 
@@ -71,10 +72,49 @@ class Model {
             if (todoId === task.id) {
                 index = i;
                 task.status = 'uncomplete';
+                task.updatedAt = new Date().toString();
             }
         });
 
         write(this.todos);
+    }
+
+    filterByCreatedAt(input) {
+        let result = this.todos;
+
+        if (input === 'asc') {
+            result.sort(function (a, b) {
+                return new Date(a.createdAt) - new Date(b.createdAt)
+            });
+        } else if (input === 'desc') {
+            result.sort(function (a, b) {
+                return new Date(b.createdAt) - new Date(a.createdAt)
+            });
+        }
+
+        return result;
+    }
+
+    filterByComplete(input) {
+        let result = [];
+
+        this.todos.forEach(task => {
+            if (task.status === 'complete') {
+                result.push(task);
+            }
+        });
+
+        if (input === 'asc') {
+            result.sort(function (a, b) {
+                return new Date(a.createdAt) - new Date(b.createdAt)
+            });
+        } else if (input === 'desc') {
+            result.sort(function (a, b) {
+                return new Date(b.createdAt) - new Date(a.createdAt)
+            });
+        }
+
+        return result;
     }
 }
 

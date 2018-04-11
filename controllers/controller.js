@@ -13,7 +13,7 @@ class Controller {
 
     static add(objTodo) {
         Model.addTodo(objTodo);
-        View.showMessage(objTodo);
+        View.showMessage([objTodo]);
     }
 
     static findById(todoId) {
@@ -34,6 +34,16 @@ class Controller {
     static uncomplete(todoId) {
         Model.uncompleteById(todoId);
         View.showList();
+    }
+
+    static createdAtFilter(input) {
+        let todos = Model.filterByCreatedAt(input);
+        View.showMessage(todos);
+    }
+
+    static completeFilter(input) {
+        let todos = Model.filterByComplete(input);
+        View.showMessage(todos);
     }
 }
 

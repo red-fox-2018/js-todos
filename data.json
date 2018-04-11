@@ -1,23 +1,23 @@
 [
   {
-    "task": "Bikin Aplikasi",
+    "task": "Makan bakso",
     "id": 1,
     "status": "uncomplete",
-    "createdAt": "2018-04-11T06:47:02.676Z",
-    "updatedAt": "2018-04-11T06:47:02.676Z"
+    "createdAt": "Wed Apr 11 2018 16:16:17 GMT+0700 (WIB)",
+    "updatedAt": "Wed Apr 11 2018 16:16:17 GMT+0700 (WIB)"
   },
   {
-    "task": "Shut down my computer",
+    "task": "Makan sapi",
     "id": 3,
-    "status": "uncomplete",
-    "createdAt": "2018-04-11T06:49:19.073Z",
-    "updatedAt": "2018-04-11T06:49:19.073Z"
+    "status": "complete",
+    "createdAt": "Wed Apr 11 2018 16:16:30 GMT+0700 (WIB)",
+    "updatedAt": "Wed Apr 11 2018 17:20:00 GMT+0700 (WIB)"
   },
   {
-    "task": "Makan Sate Taichan",
+    "task": "Makan Bakso",
     "id": 4,
-    "status": "uncomplete",
-    "createdAt": "2018-04-11T07:15:33.813Z",
-    "updatedAt": "2018-04-11T07:15:33.813Z"
+    "status": "complete",
+    "createdAt": "Wed Apr 11 2018 16:17:29 GMT+0700 (WIB)",
+    "updatedAt": "Wed Apr 11 2018 17:28:34 GMT+0700 (WIB)"
   }
 ]

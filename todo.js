@@ -8,8 +8,16 @@ switch (commands[0]) {
     case 'list':
         Controller.list();
         break;
+    case 'list:created':
+        Controller.createdAtFilter(commands[1]);
+        break;
+    case 'list:complete':
+        Controller.completeFilter(commands[1]);
+        break;
     case 'add':
-        let todo = {task: commands.slice(1).join(' ')}
+        let todo = {
+            task: commands.slice(1).join(' ')
+        }
         Controller.add(todo);
         break;
     case 'findById':

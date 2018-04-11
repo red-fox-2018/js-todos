@@ -1,1 +1,2 @@
-[{"task":"Bikin aplikasi","id":1},{"task":"Main node.js","id":2},{"task":"shut down my computer","id":3}]
+[{"task":"Bikin aplikasi","id":1,"mark":"[ ]"},
+ {"task":"Main node.js","id":2,"mark":"[ ]"}]

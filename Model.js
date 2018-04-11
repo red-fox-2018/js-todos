@@ -70,6 +70,19 @@ class Model {
     Model.writeListModel(allList);
     return allList;
   }
+  // @ todo: add task
+  static updateTagById(id, tags) {
+    let allList = Model.getListModel();
+    for (let i = 0; i < allList.length; i++) {
+      if (allList[i] != undefined && allList[i] != null) {
+        if (allList[i].id == id) {
+          allList[i].tags = allList[i].tags.concat(tags);
+        }
+      }
+    }
+    Model.writeListModel(allList);
+    return allList;
+  }
   static getListCompletedAscModel() {
     let allList = Model.getListModel();
     let allListCompleted = allList.filter((value) => value.complete);

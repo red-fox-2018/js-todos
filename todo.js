@@ -45,6 +45,13 @@ switch(command[0]) {
     Controller.listCompletedSortByCreatedController(command[1]);
     break;
   }
+  case 'tag': {
+    Controller.addTagController(command.slice(1));
+    break;
+  }
+  // case 'filter': {
+
+  // }
   default: {
     Controller.helpController();
     break;

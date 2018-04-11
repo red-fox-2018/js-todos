@@ -23,7 +23,7 @@ class View {
     for (let l of list) {
       if (l != null && l != undefined) {
         number++;
-        console.log(`${number}. [${l.complete ? 'x': ' '}] ${l.task}`); 
+        console.log(`${number}. [${l.complete ? 'x': ' '}] ${l.task} [${l.tags.length > 0 ? l.tags : '' }]`); 
       }
     }
   }

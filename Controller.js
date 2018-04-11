@@ -82,6 +82,12 @@ class Controller {
     }
     View.listView(listResultCompleted);
   }
+
+  static addTagController(value) {
+    let resultAddTag = Model.updateTagById(value[0], value.slice(1));
+    View.listView(resultAddTag)
+    // console.log(tags);
+  }
 }
 
 module.exports = Controller;

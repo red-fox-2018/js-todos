@@ -13,4 +13,12 @@ if (command[2] === undefined || command[2] === 'help') {
   Controller.addListToJson(addition)
 } else if (command[2] === 'findByID') {
   Controller.findByID(command[3])
+} else if (command[2] === 'delete') {
+  Controller.deleteByID(command[3])
+} else if (command[2] === 'complete') {
+  Controller.completeByID(command[3])
+} else if (command[2] === 'uncomplete') {
+  Controller.uncompleteByID(command[3])
+} else if (command[2] === 'list:create') {
+  Controller.sortingList(command[3])
 }

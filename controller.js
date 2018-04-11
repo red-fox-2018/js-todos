@@ -29,6 +29,16 @@ class Controller {
     let delId = Model.deleteByID(id);
     View.showDeletedID(delId);
   }
+
+  static completeByID(id) {
+    let completeId = Model.completeByID(id);
+    View.showCompletedID(completeId)
+  }
+
+  static uncompleteByID(id) {
+    let uncomplId = Model.uncompleteByID(id);
+    View.showUncompleteByID(uncomplId);
+  }
 }
 
 

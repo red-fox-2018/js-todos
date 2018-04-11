@@ -15,9 +15,7 @@ class Controller {
    * get data from getListModel and show data to listView()
    */
   static listController() {
-    // get data from model
     let listResult = Model.getListModel();
-    // show data from model to view formatter
     View.listView(listResult);
   }
   /**

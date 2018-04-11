@@ -17,7 +17,6 @@ switch(command[0]) {
     break;
   }
   case 'add': {
-    // console.log(command.join(' '));
     let newList = command.join(' ');
     Controller.addListController(newList);
     break;
@@ -36,7 +35,6 @@ switch(command[0]) {
   }
   case 'uncomplete': {
     console.log('command uncomplete');
-
     break;
   }
   default: {

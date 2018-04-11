@@ -1,5 +1,5 @@
-const TodoModel = require('./model');
-const TodoView = require('./view');
+const TodoModel = require('../models/model');
+const TodoView = require('../views/view');
 
 class TodoController {
   static help(){
@@ -19,6 +19,11 @@ class TodoController {
   static completedList(sortBy){
     let sortTodo = TodoModel.completedList(sortBy)
     TodoView.findAllDisplay(sortTodo)
+  }
+
+  static filterList(tag){
+    let filterTask = TodoModel.filterList(tag)
+    TodoView.findAllDisplay(filterTask)
   }
 
   static create(task_content){

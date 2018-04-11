@@ -1,16 +1,14 @@
 const fs = require('fs');
+const LibraryFile = require('../lib/libFile');
+const SortTask = require('../lib/sortTask');
 
 class TodoModel {
   static findAll() {
-    let todos = fs.readFileSync('data.json', 'utf8')
-    let todoParse = JSON.parse(todos)
-    return todoParse
+    let todos = LibraryFile.readFile('./data.json')
+    return todos
   }
 
   static findById(idTask){
-    // let todos = TodoModel.findAll()
-    // let detailTask = todos.find(detail => detail.id === idTask)
-    // return detailTask
     let todos = TodoModel.findAll()
     let detailTodo = todos.filter(function(todo) {
       return todo.id == idTask;
@@ -37,7 +35,7 @@ class TodoModel {
     }
 
     todos.push(newTask)
-    fs.writeFileSync('./data.json', JSON.stringify(todos, null, 2))
+    LibraryFile.writeFile('./data.json', todos)
     return newTask.task
   }
 
@@ -52,7 +50,7 @@ class TodoModel {
         todos.splice(idx, 1)
       }
     })
-    fs.writeFileSync('./data.json', JSON.stringify(todos, null, 2))
+    LibraryFile.writeFile('./data.json', todos)
     return findTodo[0].task
   }
 
@@ -64,7 +62,7 @@ class TodoModel {
         todo.update = new Date()
       }
     })
-    fs.writeFileSync('./data.json', JSON.stringify(todos, null, 2))
+    LibraryFile.writeFile('./data.json', todos)
     return todos
   }
 
@@ -73,9 +71,7 @@ class TodoModel {
     if(sortBy === undefined){
       return todos
     }else if(sortBy.toLowerCase() === 'desc'){
-      todos.sort(function(a,b){
-        return new Date(b.date) - new Date(a.date)
-      })
+      todos = SortTask.dateDesc(todos)
     }
 
     return todos
@@ -99,6 +95,19 @@ class TodoModel {
     }
 
     return completedTodos
+  }
+
+  static filterList(inputTag){
+    let todos = this.findAll()
+    let filterTodos = []
+    todos.forEach(todo => {
+       let includeTodo = todo.tag.includes(inputTag)
+       if(includeTodo){
+         filterTodos.push(todo)
+       }
+    })
+    filterTodos = SortTask.dateDesc(filterTodos)
+    return filterTodos
   }
 
   static addTags(idTask, tags){

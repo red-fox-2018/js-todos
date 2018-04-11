@@ -1,4 +1,4 @@
-const TodoController = require('./controller');
+const TodoController = require('./controllers/controller');
 
 let command = process.argv.slice(2)
 
@@ -45,6 +45,11 @@ switch (command[0]) {
     let idTask = command[1]
     let tags = command.slice(2)
     TodoController.addTags(idTask, tags)
+    break;
+
+  case "filter":
+    let tagName = command[1]
+    TodoController.filterList(tagName)
     break;
 
   default: TodoController.help()

@@ -17,6 +17,7 @@
   },
   "homepage": "https://github.com/red-fox-2018/js-todos#readme",
   "dependencies": {
+    "chalk": "^2.3.2",
     "cli-table2": "^0.2.0"
   }
 }

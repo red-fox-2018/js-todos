@@ -19,8 +19,8 @@ class Controller {
     View.listView(listResult);
   }
   /**
-   * 
-   * @param {String} newList - new list will add to List
+   * - new list will add to List
+   * @param {String} newList
    */
   static addListController(textList) {
     let addList = Model.addListModel(textList);
@@ -28,13 +28,19 @@ class Controller {
       View.successAddListView(textList);
     }
   }
-
+  /**
+   * find data by id
+   * @param {Number} id
+   */
   static findByIdController(id) {
     id = Number(id.toString())
     let listResult = Model.findByIdModel(id);
     View.listView(listResult);
   }
-
+  /**
+   * delete list by id
+   * @param {Number} id
+   */
   static deleteByIdController(id) {
     id = Number(id.toString());
     let resultDeleted = Model.deleteByIdModel(id);
@@ -42,11 +48,19 @@ class Controller {
       View.successDeletedListView(resultDeleted.task);
     }
   }
+  /**
+   * update complete property by id
+   * @param {Number} id
+   */
   static completeController(id) {
     id = Number(id.toString());
     let listResult = Model.updateCompleteById(id, true);
     View.listView(listResult);
   }
+  /**
+   * update complete property by id
+   * @param {Number} id
+   */
   static uncompleteController(id) {
     id = Number(id.toString());
     let listResult = Model.updateCompleteById(id, false);

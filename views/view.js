@@ -14,9 +14,9 @@ class View {
 
         todos.forEach(task => {
             if (task.status === 'complete') {
-                tableView.push([task.id, ` [x]`, task.task, task.createdAt, task.updatedAt]);
+                tableView.push([task.id, ` [x]`, task.task, `${task.tag.join(', ')}`, task.createdAt, task.updatedAt]);
             } else {
-                tableView.push([task.id, ` [ ]`, task.task, task.createdAt, task.updatedAt]);
+                tableView.push([task.id, ` [ ]`, task.task, `${task.tag.join(', ')}`, task.createdAt, task.updatedAt]);
             }
         });
 
@@ -28,9 +28,9 @@ class View {
 
         todos.forEach(task => {
             if (task.status === 'complete') {
-                tableView.push([task.id, ` [x]`, task.task, task.createdAt, task.updatedAt]);
+                tableView.push([task.id, ` [x]`, task.task, `${task.tag.join(', ')}`, task.createdAt, task.updatedAt]);
             } else {
-                tableView.push([task.id, ` [ ]`, task.task, task.createdAt, task.updatedAt]);
+                tableView.push([task.id, ` [ ]`, task.task, `${task.tag.join(', ')}`, task.createdAt, task.updatedAt]);
             }
         });
 

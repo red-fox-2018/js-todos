@@ -14,6 +14,7 @@ class Model {
             objTodo.id = this.todos[this.todos.length - 1].id + 1;
         }
 
+				objTodo.tag = [];
         objTodo.status = 'uncomplete';
         objTodo.createdAt = new Date().toString();
         objTodo.updatedAt = new Date().toString();
@@ -116,6 +117,37 @@ class Model {
 
         return result;
     }
+
+    addTag(id, inputTag) {
+        let result = [];
+        let tags = [];
+        inputTag = inputTag.split(',');
+        // remove duplicate tag
+        inputTag.forEach(tag => {
+            if(!tags.includes(tag)) tags.push(tag);
+        });
+
+        this.todos.forEach(todo => {
+            if (todo.id === id) {
+                todo.tag = tags;
+                result.push(todo);
+            }
+        });
+
+        write(this.todos);
+
+        return result;
+		}
+		
+		findByTag(tagName) {
+			let result = [];
+
+			this.todos.forEach(todo => {
+				if (todo.tag.includes(tagName)) result.push(todo);
+			});
+
+			return result;
+		}
 }
 
 let model = new Model();

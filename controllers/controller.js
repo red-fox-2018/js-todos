@@ -45,6 +45,16 @@ class Controller {
         let todos = Model.filterByComplete(input);
         View.showMessage(todos);
     }
+
+    static addTag(id, tag) {
+        let todo = Model.addTag(id, tag);
+        View.showMessage(todo);
+		}
+		
+		static tag(tagName) {
+			let todos = Model.findByTag(tagName);
+			View.showMessage(todos);
+		}
 }
 
 module.exports = Controller;

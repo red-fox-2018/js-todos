@@ -22,7 +22,6 @@ class Models {
    }
 
    getDate() {
-
       let d = new Date();
       let month = d.getMonth() + 1;
       let year = d.getFullYear();
@@ -98,7 +97,6 @@ class Models {
    }
 
    completeTask(id) {
-
       for (var i = 0; i < this.todos.length; i++) {
          if (this.todos[i].id == id) {
             this.todos[i].finish = true;

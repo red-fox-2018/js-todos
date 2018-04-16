@@ -26,9 +26,9 @@ class Models {
       let month = d.getMonth() + 1;
       let year = d.getFullYear();
       let day = d.getDate();
-      let hours = d.getHours();
-      let minutes = d.getMinutes();
-      let seconds = d.getSeconds();
+      let hours = ('0' + d.getHours()).slice(-2);
+      let minutes = ('0' + d.getMinutes()).slice(-2);
+      let seconds = ('0' + d.getSeconds()).slice(-2);
 
       let getDate = `${year}/${month}/${day} ${hours}:${minutes}:${seconds} WIB`;
       return getDate;
@@ -121,11 +121,11 @@ class Models {
    sortList(list, order = 'asc') {
       if (order == 'asc') {
          list.sort(function(a, b) {
-            return a.id > b.id;
+            return a.createdAt > b.createdAt;
          });
       } else if (order == 'desc') {
          list.sort(function(a, b) {
-            return a.id < b.id;
+            return a.createdAt < b.createdAt;
          });
       }
       return list;

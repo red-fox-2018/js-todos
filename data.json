@@ -1,56 +1,61 @@
-[
-  {
+[{
     "id": 1,
-    "task": "Bikin Aplikasi",
+    "task": "Bikin aplikasi",
     "finish": true,
     "tagName": [],
-    "createdAt": "2018-04-11T18:15:18.718Z",
-    "completedAt": "2018-04-11T18:15:25.502Z"
+    "createdAt": "2018/4/16 23:8:26 WIB",
+    "completedAt": "2018/4/16 23:8:46 WIB"
   },
   {
     "id": 2,
     "task": "Main Node.js",
     "finish": true,
     "tagName": [
-      "javascript"
+      "Javascript"
     ],
-    "createdAt": "2018-04-11T18:15:33.435Z",
-    "completedAt": "2018-04-11T18:15:51.939Z"
+    "createdAt": "2018/4/16 23:9:46 WIB",
+    "completedAt": "2018/4/16 23:10:44 WIB"
   },
   {
     "id": 3,
-    "task": "Belajar",
+    "task": "Makan",
     "finish": false,
     "tagName": [
-      "OOP"
+      "Siang",
+      "Malam"
     ],
-    "createdAt": "2018-04-11T18:16:00.779Z",
-    "completedAt": null
+    "createdAt": "2018/4/16 23:11:35 WIB",
+    "completedAt": ""
   },
   {
     "id": 4,
-    "task": "Makan",
+    "task": "Belajar",
     "finish": true,
     "tagName": [
-      "malam"
+      "sqlite3",
+      "OOP"
     ],
-    "createdAt": "2018-04-11T18:16:45.223Z",
-    "completedAt": "2018-04-11T18:57:03.336Z"
+    "createdAt": "2018/4/16 23:13:55 WIB",
+    "completedAt": "2018/4/16 23:49:44 WIB"
   },
   {
     "id": 5,
-    "task": "Tidur",
+    "task": "Lari",
     "finish": false,
-    "tagName": [],
-    "createdAt": "2018-04-11T18:35:31.225Z",
-    "completedAt": null
+    "tagName": [
+      "Pagi"
+    ],
+    "createdAt": "2018/4/16 23:14:37 WIB",
+    "completedAt": ""
   },
   {
     "id": 6,
-    "task": "Lari",
+    "task": "Tidur",
     "finish": false,
-    "tagName": [],
-    "createdAt": "2018-04-11T18:41:37.816Z",
+    "tagName": [
+      "Malam"
+    ],
+    "createdAt": "2018/4/16 23:15:44 WIB",
     "completedAt": ""
   }
 ]

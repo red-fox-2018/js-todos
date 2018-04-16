@@ -41,12 +41,12 @@ class Controllers {
   }
 
   static delete(id){
-    let idTask = model.delTask(id);
+    let idTask = model.deleteTask(id);
     View.delete(idTask);
   }
 
-  static deleteAll(all){
-    let deleteAll = model.deletedAll(all);
+  static deleteAll(){
+    let deleteAll = model.deleteAll();
     View.destroy(deleteAll);
   }
 

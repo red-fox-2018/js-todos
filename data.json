@@ -1,1 +1,61 @@
-[]
+[{
+    "id": 1,
+    "task": "Bikin aplikasi",
+    "finish": true,
+    "tagName": [],
+    "createdAt": "2018/4/16 23:08:26 WIB",
+    "completedAt": "2018/4/16 23:8:46 WIB"
+  },
+  {
+    "id": 2,
+    "task": "Main Node.js",
+    "finish": true,
+    "tagName": [
+      "Javascript"
+    ],
+    "createdAt": "2018/4/16 23:09:46 WIB",
+    "completedAt": "2018/4/16 23:10:44 WIB"
+  },
+  {
+    "id": 3,
+    "task": "Makan",
+    "finish": false,
+    "tagName": [
+      "Siang",
+      "Malam"
+    ],
+    "createdAt": "2018/4/16 23:11:35 WIB",
+    "completedAt": ""
+  },
+  {
+    "id": 4,
+    "task": "Belajar",
+    "finish": true,
+    "tagName": [
+      "sqlite3",
+      "OOP"
+    ],
+    "createdAt": "2018/4/16 23:13:55 WIB",
+    "completedAt": "2018/4/16 23:49:44 WIB"
+  },
+  {
+    "id": 5,
+    "task": "Lari",
+    "finish": false,
+    "tagName": [
+      "Pagi"
+    ],
+    "createdAt": "2018/4/16 23:14:37 WIB",
+    "completedAt": ""
+  },
+  {
+    "id": 6,
+    "task": "Tidur",
+    "finish": false,
+    "tagName": [
+      "Malam"
+    ],
+    "createdAt": "2018/4/16 23:15:44 WIB",
+    "completedAt": ""
+  }
+]
